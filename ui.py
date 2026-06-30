@@ -25,9 +25,9 @@ class UI:
 
         try:
             self.logos_image = tk.PhotoImage(file="media/logos.png")
-            canvas = tk.Canvas(self.root, width=180, height=120)
-            canvas.create_image(90, 60, image=self.logos_image)
-            canvas.grid(row=0, column=1, columnspan=2)
+            canvas = tk.Canvas(self.root, width=200, height=150)
+            canvas.create_image(105, 65, image=self.logos_image)
+            canvas.grid(row=0, column=0, columnspan=2)
         except tk.TclError:
             print("Error: Could not load media/logos.png.")
 
@@ -55,7 +55,7 @@ class UI:
         tk.Label(self.root, text="Min Price").grid(row=3, column=0, sticky="w")
 
         self.price_entry = tk.Entry(self.root, width=28)
-        self.price_entry.insert(0, "150000000")
+        self.price_entry.insert(0, "200000000")
         self.price_entry.grid(row=3, column=1)
 
         # START BUTTON
@@ -67,7 +67,7 @@ class UI:
             fg="white",
             width=15
         )
-        start_button.grid(row=4, column=0, columnspan=2, pady=15)
+        start_button.grid(row=4, column=0, columnspan=2, pady=20)
 
     def search(self):
 
